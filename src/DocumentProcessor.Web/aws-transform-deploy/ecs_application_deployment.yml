@@ -10,10 +10,12 @@ Parameters:
   ECSClusterName:
     Type: String
     Description: 'The ECS Cluster into which to launch resources'
+    Default: 'AWSTransform-Cluster-1-5fba29'
 
   SubnetIds:
     Type: String
     Description: 'Subnet Ids for the ECS Service'
+    Default: 'subnet-0a8edc80efab0f8b2'
 
   SecurityGroupIds:
     Type: String

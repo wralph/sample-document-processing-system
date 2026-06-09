@@ -25,6 +25,16 @@ The process consists of the following steps:
 
 When using the AWS Transform Web UI to provide infrastructure parameter values, the templates are automatically populated with these defaults. 
 
+```
+    InstanceType = "t3.medium"
+    VolumeSize = "30"
+    Region = "us-east-1"
+    SubnetId = "subnet-0a8edc80efab0f8b2"
+    SecurityGroupIds = "{'sg-072e92613bb588483'}"
+    EC2InstanceProfile = "AWSTransform-Deploy-App-Instance-Role"
+    CustomAmiId = ""
+    MainBinary = "DocumentProcessor.Web"
+```
 However, you can override any defaults by:
 
 1. modifying parameters in the CloudFormation template directly
@@ -37,7 +47,7 @@ This script uses the provided template to automate the infrastructure provisioni
 
 Run this script: 
 ```
-powershell ./deploy_infra.ps1 -SubnetId subnet-123456789 -SecurityGroupIds sg-123456789 -DeploymentType EC2
+powershell ./deploy_infra.ps1 -DeploymentType EC2
 ```
 
 The script:
